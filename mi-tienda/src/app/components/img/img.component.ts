@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'; /* coloc
 export class ImgComponent {
   @Input() img: string = '';  /* al poner @Input() puedo mandarle información desde el padre hacia el hijo. */
   @Output() loaded = new EventEmitter<String>();
-  imageDefault = "/mi-tienda/src/assets/imagenotFound.jpg"
+  imageDefault = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png"
 
   imgError(){
     this.img = this.imageDefault;
