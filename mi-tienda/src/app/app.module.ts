@@ -11,7 +11,6 @@ import { ImgComponent } from './components/img/img.component';
   declarations: [
     AppComponent,
     ImgComponent,
-
   ],
   imports: [
     BrowserModule,

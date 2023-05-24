@@ -1,2 +1,5 @@
-<p>img works!</p>
-
+<p>img works!.</p>
+<img width="200" [src]="img" *ngIf="img;else elseImage" >
+<ng-template #elseImage>
+  <img width="200" src="/mi-tienda/src/assets/icons8-image-50.png" alt="imagen no encontrada">
+</ng-template>
