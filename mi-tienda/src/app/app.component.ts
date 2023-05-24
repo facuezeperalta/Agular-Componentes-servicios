@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mi-tienda';
   imageParent = '';
+  onLoaded(img:string){
+    console.log('log padre: ',img);
+  }
 }

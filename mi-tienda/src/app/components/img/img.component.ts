@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'; /* colocamos Input para poder usar los inputs */
+import { Component, Input, Output, EventEmitter } from '@angular/core'; /* colocamos Input para poder usar los inputs */
 
 @Component({ /* decorador  le dicen al compilador como debe comportarse*/
   selector: 'app-img',
@@ -6,7 +6,16 @@ import { Component, Input } from '@angular/core'; /* colocamos Input para poder 
   styleUrls: ['./img.component.css']
 })
 export class ImgComponent {
-  @Input() img: string = 'Valor inicial';  /* al poner @Input() puedo mandarle información desde el padre hacia el hijo. */
+  @Input() img: string = '';  /* al poner @Input() puedo mandarle información desde el padre hacia el hijo. */
+  @Output() loaded = new EventEmitter<String>();
+  imageDefault = "/mi-tienda/src/assets/imagenotFound.jpg"
 
+  imgError(){
+    this.img = this.imageDefault;
+  }
+  imageLoaded(){
+  console.log('log hijo');
+  this.loaded.emit('this.img');
+  }
 
 }

@@ -1,5 +1,5 @@
 <p>img works!.</p>
-<img width="200" [src]="img" *ngIf="img;else elseImage" >
+<img width="200" (load) ="imageLoaded" (error) = "imgError" [src]="img" *ngIf="img;else elseImage" ><!--  error() es un evento interno, no se comunica con el padre -->
 <ng-template #elseImage>
-  <img width="200" src="/mi-tienda/src/assets/icons8-image-50.png" alt="imagen no encontrada">
+  <img width="200" [src]="imageDefault" alt="imagen no encontrada">
 </ng-template>
