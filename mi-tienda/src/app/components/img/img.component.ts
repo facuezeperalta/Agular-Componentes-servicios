@@ -7,15 +7,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'; /* coloc
 })
 export class ImgComponent {
   @Input() img: string = '';  /* al poner @Input() puedo mandarle información desde el padre hacia el hijo. */
-  @Output() loaded = new EventEmitter<String>();
-  imageDefault = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png"
+  @Output() loaded = new EventEmitter<string>();
+  imageDefault = "../../../assets/images/voidImage.png"
+
 
   imgError(){
     this.img = this.imageDefault;
   }
-  imageLoaded(){
-  console.log('log hijo');
-  this.loaded.emit('this.img');
+  imgLoaded(){
+  console.log('Log hijo');
+  this.loaded.emit(this.img);
   }
 
 }
