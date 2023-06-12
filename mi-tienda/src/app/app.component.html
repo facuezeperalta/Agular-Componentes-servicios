@@ -1,9 +1,0 @@
-<label for="">Ingrese la url de una imagen para mostrarla</label>
-<p> <input type="text" [(ngModel)] ="imageParent"> </p>
-<app-img (loaded)="onLoaded($event)" [img]="imageParent"></app-img>
-<br>
-<hr>
-
-
-<app-product [product]="product" *ngFor="let product of products"></app-product>
-
