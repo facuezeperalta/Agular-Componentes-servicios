@@ -7,4 +7,9 @@ import { Component,OnInit, Input} from '@angular/core';
 })
 export class ImgComponent {
   @Input() img: string = '';
+
+  imgError(){
+
+  }
+
 }
