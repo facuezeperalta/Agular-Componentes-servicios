@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./img.component.css']
 })
 export class ImgComponent {
-
+  @Input() img: string = '';
 }

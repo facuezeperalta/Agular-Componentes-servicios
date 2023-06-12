@@ -1,1 +1,8 @@
-<p>img works!</p>
+<p>img works</p>
+<img width="200" [src]="img" *ngIf="img; else elseBlock">
+
+<ng-template #elseBlock>
+  <img width="200" src="../../../assets/notFound.png" alt="">
+</ng-template>
+
+
