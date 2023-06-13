@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mystore';
   imgParent = 'asdsad';
+
+  onLoaded(img: string){
+    console.log('Log Padre',img);
+  }
 }
